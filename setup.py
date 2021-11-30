@@ -86,7 +86,7 @@ else:
             def run(self):
                 orig_dir = os.getcwd()
                 os.chdir(os.path.join(BASEDIR, "src", "libbacktrace"))
-                subprocess.check_call(["./configure"])
+                subprocess.check_call(["./configure", "--host=amd64"])
                 os.chdir(orig_dir)
                 super(vmprof_build, self).run()
 
